@@ -35,74 +35,7 @@
 
 ## Уровни и компетенции
 
-```
-flowchart LR
-    %% Основная линия развития
-    J[Junior<br/>👶 0-1 год] --> JP[Junior+<br/>📚 6-18 мес]
-    JP --> M[Middle<br/>⚡ 1.5-3 года]
-    M --> MP[Middle+<br/>🔧 ~4 года]
-    MP --> S[Senior<br/>🏗️ 5+ лет]
-    S --> SP[Senior+<br/>👑 Эксперт]
-
-    %% Компетенции Junior
-    J --> J1[Платформа 1С: 1<br/>Установка, режимы]
-    J --> J2[Конфигурации: 1<br/>Базовые объекты]
-    J --> J3[Язык и БД: 1<br/>SELECT запросы]
-    J --> J4[Отчеты: 1<br/>Простые формы]
-
-    %% Компетенции Junior+
-    JP --> JP1[Платформа: 2<br/>Клиент-сервер]
-    JP --> JP2[Конфигурации: 2<br/>Расширения]
-    JP --> JP3[Язык: 2<br/>Процедуры, функции]
-    JP --> JP4[СКД: 2<br/>Печатные формы]
-    JP --> JP5[API: 1<br/>Первые интеграции]
-
-    %% Компетенции Middle
-    M --> M1[Платформа: 3<br/>Кластеры]
-    M --> M2[Метаданные: 3<br/>БСП, типовые]
-    M --> M3[Запросы: 3<br/>Оптимизация]
-    M --> M4[СКД: 3<br/>Сложные отчеты]
-    M --> M5[REST API: 2<br/>HTTP-сервисы]
-    M --> M6[Git: 1<br/>Базовый DevOps]
-    M --> M7[Архитектура: 1<br/>Проектирование]
-
-    %% Компетенции Middle+
-    MP --> MP1[Платформа: 4<br/>Масштабирование]
-    MP --> MP2[Конфигурации: 4<br/>Сложные решения]
-    MP --> MP3[Производительность: 2<br/>Профилирование]
-    MP --> MP4[DevOps: 2<br/>CI/CD пайплайны]
-    MP --> MP5[API: 3<br/>Микросервисы]
-    MP --> MP6[Лидерство: 1<br/>Менторство]
-
-    %% Компетенции Senior
-    S --> S1[Платформа: 5<br/>Эксперт уровень]
-    S --> S2[Архитектура: 4<br/>Корпоративные системы]
-    S --> S3[DevOps: 3<br/>Docker, K8s]
-    S --> S4[API: 4<br/>Enterprise интеграции]
-    S --> S5[Менеджмент: 3<br/>Команды, пресейл]
-
-    %% Компетенции Senior+
-    SP --> SP1[Мастерство: 5<br/>Все области]
-    SP --> SP2[Архитектура: 5<br/>High-load решения]
-    SP --> SP3[DevOps: 4<br/>Полная автоматизация]
-    SP --> SP4[Лидерство: 5<br/>Техническое руководство]
-
-    %% Стили для уровней
-    classDef junior fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-    classDef juniorplus fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
-    classDef middle fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    classDef middleplus fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    classDef senior fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    classDef seniorplus fill:#ffebee,stroke:#d32f2f,stroke-width:3px
-
-    %% Применение стилей
-    class J,J1,J2,J3,J4 junior
-    class JP,JP1,JP2,JP3,JP4,JP5 juniorplus
-    class M,M1,M2,M3,M4,M5,M6,M7 middle
-    class MP,MP1,MP2,MP3,MP4,MP5,MP6 middleplus
-    class S,S1,S2,S3,S4,S5 senior
-    class SP,SP1,SP2,SP3,SP4 seniorplus
-```
+[![](https://mermaid.ink/img/pako:eNqdWOtuE0cUfpXVIn4xDt6bvbEqJJRUhVQrLBapUp382KxnExfHG62dBohSNQEKamhTWqRKFJGm_OifVpgQl9ycvMLsK_QF2kfomctefQk0Srw-M2e-c-bMN9_MZk12_TqWK7LX9FfdRSfoSLemZ1sS_Fy8KJFX4dfklOyRHumHT6SZlVbDD3jvTO3fne9fi6aP5oPLV4oFRSJvwX1_jrskMM-h9YSckV64yaC-IQfkIAsnFQpXpJmptbG-68J5insrNbJDjkk33AwfkFNI9YR0JYXsViSFZQTpbwBKl_TZJI5IF0ng1SN_AeZJuDWXhVNrLHgfwA7I2_A-uHZ5-BjwKYC9o2DhFulJ8OVN-C3gHUEGeTStRl6Td-B3NHT0oRRuAHSf5XdEv4cbOQS9Rl4C8CNainArRtmha0InxnKIZh7HT6q-AwNhtuFDuiYSORJFvCSiKDxKtfb3H4_-OdiOgquiWZha1tQz5niiRIGqQJWfHkeNbBKlgmJKsFw9mMc21LhH9j6INDG0SOcc3lyKiFMVpa0Oo05FUnmFn0PPAQPZLMDK0Cru0c-5PMo4xgisX6FlI3wMy0uJ14fnNpKACbtkZwAuTRk1vdi0QPsUPtwCBj8I7wPQEQ80AAKs2YWsniUQkPojOlPIcyhjkrFG7Wr1ekI0PnNOdU7VHswynuP5hLMa9XoTR1E44awc36qccFZkallTz5pG2hxFv3RYCPd8V7SwaSkTRkETQkW678m6DCJPYSTluK9gnMVLaw3nm5bwrcukqkeXeC47dBzJtEhYgE7AjE1oPYvkKQeTJpcY9pKcsSEn8PeOg4bbEv0KHUxkKFYOJ-GXQNmF7E9BUvtCExPJyo0U7OK0vHbrVjXZXCB-A-6l2jT-8sZyO-LjJ40O7Jw3VEMHfMs18gOU7iEAbQo9ZnXKiibvYVuRkoWeCwdxnc6lsdAcS9A4p5uWoLFQRkvLmnrWNLJmKWuWM-Z4lkdZUZF99nvUyCb9lf7_aB5DijTOYXokrpaQEWuEuOp8JV5wQWTn3psRa5FAjSO_Pox_bOUeR1I7gKeNJEqsljRtthMposR3wjDmDEHXY8pytKnrl6emAQIGHMLnMXv2E_bGA8XW0KISHUA4vgGH7I94VKlGfgHXfSYbVD72yGnM-Bf8AKP1j_rOZ7qNkyuZJQTbzhFdCLYdmVrW1LOmkTVLaXMUs9NZ2MDr7Z8hvGhlkzMuSVBMION78joDyDMYSWruKzht81LbwxltRJQ5hb4-9G5L4XfsMnfGlmST6-pcFksdSUE9Og5ohDP22WUgexG52TWRDUuO7whXi8nHaTTtu7dxgKRPzXbOU-ds4-E-bnVwsBw02njcIR8NNYZSTvD2FdssXWg75huQngdHrMp0x4AO0aPmfVkoZMgWLMzprS1YKETS1rKmnjWNjDmed1FcqqhPn0aNfIZ_plf3g8gXo4pMzuFfJKq22Ow2FdUXqVtCXHtBwh-pVrA3kvgycSBxzUlIm3Amhh3NRg58rbGwWGj6Tn0E-WKghH764LagpKBaRJkQbQt-3RjA0YcyTMzyN0YTKr70irHByEU1H27ER2whgUEj1W6XRT6mddknx3Sz3hfL34c5HVKqdgHqCb-F8XFu02m3p7EnNfGXuCl5jWazckFVJkuehtqdwL-NKxeUyXKprgqzsNqodxYr2vId5PpNP6hc8DwPeX6rU1jFUMtOZd5v1nlDu3EPVxR9-U4ulhME_qqIpbuOZxTjWJppYs3NxlLHx8qBu_7SMu7glntXRPC8SbOYRPCMshubHxJhTKGFCGSpfkjpeZpahHCbnOSS_YK9volEseapXj0pu1Ey3NGJFut62VGG4i03V9oRpukZ2IwxVVyua-pITGXewGoxh7nEbkFxMT0TKzEe9krjiolLhlIcjpfK0XOxjt0Y06krulEeiWmaRax7Ocw2TtXR07DhGTFeyVHmJ52ReLqj6KY7FC-do4fnMY4x3ZJqquZIzPmy4iruwDkARKAvIz22H_nxwYWMnSeHqRykGTRTRRayqshGoKlsd6b7r968eeMzBbGHyh8af-j8YfBdlsGcAtApZMEvPGz4BVFKtks6XTFAQTMqmtHQjC6YlemtQncV-qvgUNURfXlN-Jf2tBRkqcjSkKUjy0BWCcErwFLqlVO4ASDcvuAPPAEQLleI3qgSwqS9bQXZKrI1ZOsIzr82zucHRwrMEFwADmQ3taYykheCRl2udIIVjOQlHCw51JTX6PhZubOIl_CsXIGvdSe4PSvPttZhzLLT-tz3l6Jhgb-ysChXPKfZBmtlue508HTDWQicxAW36jiY8ldaHbmiFMtFBiJX1uQ7ckUtT2h6WSuXSmq5qCiKriP5rlwpmOaEqRYny6pq6HoRXNaRfI_FVScU05wslg1F04xSUVWRjOuNjh9Y_H-c7F-d6_8BsxolDA?type=png)](https://mermaid.live/edit#pako:eNqdWOtuE0cUfpXVIn4xDt6bvbEqJJRUhVQrLBapUp382KxnExfHG62dBohSNQEKamhTWqRKFJGm_OifVpgQl9ycvMLsK_QF2kfomctefQk0Srw-M2e-c-bMN9_MZk12_TqWK7LX9FfdRSfoSLemZ1sS_Fy8KJFX4dfklOyRHumHT6SZlVbDD3jvTO3fne9fi6aP5oPLV4oFRSJvwX1_jrskMM-h9YSckV64yaC-IQfkIAsnFQpXpJmptbG-68J5insrNbJDjkk33AwfkFNI9YR0JYXsViSFZQTpbwBKl_TZJI5IF0ng1SN_AeZJuDWXhVNrLHgfwA7I2_A-uHZ5-BjwKYC9o2DhFulJ8OVN-C3gHUEGeTStRl6Td-B3NHT0oRRuAHSf5XdEv4cbOQS9Rl4C8CNainArRtmha0InxnKIZh7HT6q-AwNhtuFDuiYSORJFvCSiKDxKtfb3H4_-OdiOgquiWZha1tQz5niiRIGqQJWfHkeNbBKlgmJKsFw9mMc21LhH9j6INDG0SOcc3lyKiFMVpa0Oo05FUnmFn0PPAQPZLMDK0Cru0c-5PMo4xgisX6FlI3wMy0uJ14fnNpKACbtkZwAuTRk1vdi0QPsUPtwCBj8I7wPQEQ80AAKs2YWsniUQkPojOlPIcyhjkrFG7Wr1ekI0PnNOdU7VHswynuP5hLMa9XoTR1E44awc36qccFZkallTz5pG2hxFv3RYCPd8V7SwaSkTRkETQkW678m6DCJPYSTluK9gnMVLaw3nm5bwrcukqkeXeC47dBzJtEhYgE7AjE1oPYvkKQeTJpcY9pKcsSEn8PeOg4bbEv0KHUxkKFYOJ-GXQNmF7E9BUvtCExPJyo0U7OK0vHbrVjXZXCB-A-6l2jT-8sZyO-LjJ40O7Jw3VEMHfMs18gOU7iEAbQo9ZnXKiibvYVuRkoWeCwdxnc6lsdAcS9A4p5uWoLFQRkvLmnrWNLJmKWuWM-Z4lkdZUZF99nvUyCb9lf7_aB5DijTOYXokrpaQEWuEuOp8JV5wQWTn3psRa5FAjSO_Pox_bOUeR1I7gKeNJEqsljRtthMposR3wjDmDEHXY8pytKnrl6emAQIGHMLnMXv2E_bGA8XW0KISHUA4vgGH7I94VKlGfgHXfSYbVD72yGnM-Bf8AKP1j_rOZ7qNkyuZJQTbzhFdCLYdmVrW1LOmkTVLaXMUs9NZ2MDr7Z8hvGhlkzMuSVBMION78joDyDMYSWruKzht81LbwxltRJQ5hb4-9G5L4XfsMnfGlmST6-pcFksdSUE9Og5ohDP22WUgexG52TWRDUuO7whXi8nHaTTtu7dxgKRPzXbOU-ds4-E-bnVwsBw02njcIR8NNYZSTvD2FdssXWg75huQngdHrMp0x4AO0aPmfVkoZMgWLMzprS1YKETS1rKmnjWNjDmed1FcqqhPn0aNfIZ_plf3g8gXo4pMzuFfJKq22Ow2FdUXqVtCXHtBwh-pVrA3kvgycSBxzUlIm3Amhh3NRg58rbGwWGj6Tn0E-WKghH764LagpKBaRJkQbQt-3RjA0YcyTMzyN0YTKr70irHByEU1H27ER2whgUEj1W6XRT6mddknx3Sz3hfL34c5HVKqdgHqCb-F8XFu02m3p7EnNfGXuCl5jWazckFVJkuehtqdwL-NKxeUyXKprgqzsNqodxYr2vId5PpNP6hc8DwPeX6rU1jFUMtOZd5v1nlDu3EPVxR9-U4ulhME_qqIpbuOZxTjWJppYs3NxlLHx8qBu_7SMu7glntXRPC8SbOYRPCMshubHxJhTKGFCGSpfkjpeZpahHCbnOSS_YK9volEseapXj0pu1Ey3NGJFut62VGG4i03V9oRpukZ2IwxVVyua-pITGXewGoxh7nEbkFxMT0TKzEe9krjiolLhlIcjpfK0XOxjt0Y06krulEeiWmaRax7Ocw2TtXR07DhGTFeyVHmJ52ReLqj6KY7FC-do4fnMY4x3ZJqquZIzPmy4iruwDkARKAvIz22H_nxwYWMnSeHqRykGTRTRRayqshGoKlsd6b7r968eeMzBbGHyh8af-j8YfBdlsGcAtApZMEvPGz4BVFKtks6XTFAQTMqmtHQjC6YlemtQncV-qvgUNURfXlN-Jf2tBRkqcjSkKUjy0BWCcErwFLqlVO4ASDcvuAPPAEQLleI3qgSwqS9bQXZKrI1ZOsIzr82zucHRwrMEFwADmQ3taYykheCRl2udIIVjOQlHCw51JTX6PhZubOIl_CsXIGvdSe4PSvPttZhzLLT-tz3l6Jhgb-ysChXPKfZBmtlue508HTDWQicxAW36jiY8ldaHbmiFMtFBiJX1uQ7ckUtT2h6WSuXSmq5qCiKriP5rlwpmOaEqRYny6pq6HoRXNaRfI_FVScU05wslg1F04xSUVWRjOuNjh9Y_H-c7F-d6_8BsxolDA)
 
 ### Junior
 **Что учить**
