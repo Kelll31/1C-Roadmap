@@ -1,0 +1,39 @@
+name: Проверка документации
+
+on:
+  pull_request:
+    paths:
+      - "**.md"
+      - "scripts/**"
+      - ".github/workflows/docs-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**.md"
+      - "scripts/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  internal-links:
+    name: Внутренние ссылки и якоря
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Проверить ссылки между файлами и якоря
+        run: python3 scripts/check_links.py .
+
+  mermaid:
+    name: Диаграммы Mermaid
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Установить парсер mermaid
+        run: npm install --no-save --no-package-lock mermaid@12 jsdom@25
+      - name: Разобрать все диаграммы
+        run: node scripts/check_mermaid.mjs .

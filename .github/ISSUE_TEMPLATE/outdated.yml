@@ -26,7 +26,10 @@ body:
         - 10_Domain_and_Law.md
         - 11_Checklists.md
         - 12_Glossary.md
+        - 13_Career.md
+        - tracks/ (треки специализации)
         - all.md
+        - SOURCES.md
         - Другой файл
     validations:
       required: true
