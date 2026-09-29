@@ -1,0 +1,36 @@
+name: "🔗 Битая ссылка"
+description: "Ссылка не открывается, ведёт не туда или устарела"
+title: "[Ссылка] "
+labels: ["broken-link"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Битая ссылка
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Где встречается
+      placeholder: "05_Resources.md → YouTube-каналы"
+    validations:
+      required: true
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: Что происходит
+      options:
+        - Страница не найдена (404)
+        - Сайт недоступен
+        - Ресурс переехал на новый адрес
+        - Содержимое больше не соответствует описанию
+        - Другое
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Актуальная ссылка (если знаете)
+      placeholder: "https://..."

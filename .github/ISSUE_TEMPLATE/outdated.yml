@@ -1,0 +1,61 @@
+name: "🕰️ Устаревшая информация"
+description: "Изменились версии, законодательство, зарплаты, форматы экзаменов или требования рынка"
+title: "[Устарело] "
+labels: ["outdated"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что помогаете держать роудмап актуальным! Пожалуйста, укажите источник: без него изменение не будет принято.
+  - type: dropdown
+    id: file
+    attributes:
+      label: Файл
+      multiple: true
+      options:
+        - README.md
+        - 01_Strategy.md
+        - 02_Timeline.md
+        - 03_Competencies.md
+        - 04_Certifications.md
+        - 05_Resources.md
+        - 06_FAQ_and_Tips.md
+        - 07_Projects.md
+        - 08_Interview.md
+        - 09_AI_Development.md
+        - 10_Domain_and_Law.md
+        - 11_Checklists.md
+        - 12_Glossary.md
+        - all.md
+        - Другой файл
+    validations:
+      required: true
+  - type: input
+    id: section
+    attributes:
+      label: Раздел
+      placeholder: "Например: «Неделя 9–10» или «Зарплатная вилка Middle»"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Что написано сейчас
+      description: Процитируйте устаревший фрагмент.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Как на самом деле
+      description: Актуальная формулировка и дата, с которой она верна.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Источник
+      description: "ИТС, 1c.ru, v8.1c.ru, consultant.ru, hh.ru, GitHub-репозиторий проекта и т. п."
+      placeholder: "https://..."
+    validations:
+      required: true
