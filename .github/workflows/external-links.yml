@@ -1,0 +1,28 @@
+name: Внешние ссылки (еженедельно)
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    name: Проверка внешних ссылок
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Проверить внешние ссылки
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Часть российских сайтов недоступна из сетей GitHub или отвечает 403 роботам,
+          # поэтому проверка информационная и не роняет сборку. Смотрите отчёт в Summary.
+          args: >-
+            --no-progress
+            --max-retries 2
+            --timeout 30
+            --accept 200,203,206,429
+            "./**/*.md"
+          fail: false

@@ -1,0 +1,27 @@
+name: "💡 Предложение"
+description: "Новая тема, раздел, проект для портфолио, вопрос для FAQ или собеседования"
+title: "[Идея] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Что предлагаете добавить или изменить
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Зачем это читателю роудмапа
+      description: Какую проблему решает, для какого грейда или трека.
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Куда это лучше поместить
+      placeholder: "Например: 07_Projects.md, новый проект уровня Middle"
+  - type: textarea
+    id: sources
+    attributes:
+      label: Источники и материалы

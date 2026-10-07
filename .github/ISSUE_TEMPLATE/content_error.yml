@@ -1,0 +1,48 @@
+name: "🐛 Фактическая ошибка"
+description: "Неверное утверждение о платформе, языке, механизмах 1С или ошибка в примере кода"
+title: "[Ошибка] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Тип ошибки
+      options:
+        - Неверный факт о платформе или продукте
+        - Ошибка в примере BSL-кода
+        - Ошибка в диаграмме или разметке
+        - Противоречие между файлами
+        - Другое
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Файл и раздел
+      placeholder: "06_FAQ_and_Tips.md → Подводные камни → пункт 3"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Описание проблемы
+      description: Что именно неверно и почему.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Предлагаемое исправление
+      description: Для кода приложите исправленный фрагмент в блоке ```bsl.
+  - type: input
+    id: source
+    attributes:
+      label: Источник
+      placeholder: "https://its.1c.ru/db/v8std ..."
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Проверка
+      options:
+        - label: Я убедился, что такого Issue ещё нет
+          required: true
