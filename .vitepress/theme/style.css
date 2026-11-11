@@ -30,23 +30,16 @@
 }
 
 .VPNavBarTitle .title {
-  gap: 10px;
   font-weight: 750;
   letter-spacing: -.045em;
 }
 
-.VPNavBarTitle .title::before {
-  content: "↗";
-  display: grid;
-  place-items: center;
+.VPNavBarTitle .title .logo {
   width: 30px;
   height: 30px;
   flex: 0 0 30px;
+  margin-right: 10px;
   border-radius: 8px;
-  background: var(--road-yellow);
-  color: var(--road-ink);
-  font-size: 21px;
-  line-height: 1;
 }
 
 .VPContent.is-home .VPHome {

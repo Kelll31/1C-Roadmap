@@ -6,15 +6,18 @@ import { seo, siteDescription, siteName } from './seo.mjs'
 const repository = 'https://github.com/Kelll31/1C-Roadmap'
 const chapter = (text, file) => ({ text, link: `/${file}` })
 const pagesPath = (process.env.PAGES_BASE_PATH ?? '1C-Roadmap').replace(/^\/+|\/+$/g, '')
+const base = pagesPath ? `/${pagesPath}/` : '/'
+const logo = 'logo.png'
 
 export default defineConfig(withMermaid({
   lang: 'ru',
   title: siteName,
   description: siteDescription,
-  base: pagesPath ? `/${pagesPath}/` : '/',
+  base,
   srcExclude: ['.github/**'],
   appearance: true,
   head: [
+    ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: `${base}${logo}` }],
     ['meta', { name: 'theme-color', content: '#f8f7f2' }],
     ['meta', { name: 'robots', content: 'max-image-preview:large' }]
   ],
@@ -45,6 +48,7 @@ export default defineConfig(withMermaid({
   mermaid: { securityLevel: 'strict' },
   themeConfig: {
     siteTitle: siteName,
+    logo: `/${logo}`,
     nav: [
       chapter('Этапы', '02_Timeline'),
       chapter('Проекты', '07_Projects'),
