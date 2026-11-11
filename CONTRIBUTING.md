@@ -38,7 +38,7 @@ git checkout -b fix/8-3-28-not-released upstream/main
 python3 scripts/check_links.py .
 
 # 4. Если меняли диаграммы Mermaid, проверьте и их (нужен Node.js 22)
-npm install --no-save --no-package-lock mermaid@12 jsdom@25
+npm ci
 node scripts/check_mermaid.mjs .
 
 # 5. Закоммитьте, запушьте и откройте Pull Request
@@ -48,6 +48,17 @@ git push origin fix/8-3-28-not-released
 ```
 
 Каталог `node_modules/` указан в `.gitignore`, в коммит он не попадёт. Те же две проверки запускает GitHub Actions на каждый Pull Request.
+
+### 🌐 Сайт на GitHub Pages
+
+Сайт собирается из этих же Markdown-файлов на VitePress. Для локального просмотра установите Node.js 22 и запустите:
+
+```bash
+npm ci
+npm run dev
+```
+
+`npm run build` проверяет сборку сайта. GitHub Actions публикует результат после обновления `main`.
 
 ## 🗂 Устройство репозитория
 

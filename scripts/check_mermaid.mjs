@@ -1,5 +1,5 @@
 // Проверка всех блоков ```mermaid в *.md парсером mermaid.
-// Установка: npm install --no-save mermaid@12 jsdom@25
+// Установка: npm ci
 // Запуск из корня репозитория: node scripts/check_mermaid.mjs .
 import { JSDOM } from 'jsdom'
 import fs from 'fs'
