@@ -70,11 +70,11 @@ flowchart TB
     L2 --> L3["Дымовые тесты<br/>формы открываются, ключевой сценарий стартует"]
     L3 --> L4["Сценарные UI-тесты<br/>Vanessa Automation и аналоги"]
     L4 --> L5["Ручное и исследовательское тестирование<br/>приёмка"]
-    style L1 fill:#e6f4ea,stroke:#3f8f5a
-    style L2 fill:#e6f4ea,stroke:#3f8f5a
-    style L3 fill:#fdf1e0,stroke:#b8862f
-    style L4 fill:#fdf1e0,stroke:#b8862f
-    style L5 fill:#e8f0fe,stroke:#4a6fa5
+    style L1 fill:#e6f4ea,stroke:#3f8f5a,color:#143c23
+    style L2 fill:#e6f4ea,stroke:#3f8f5a,color:#143c23
+    style L3 fill:#fdf1e0,stroke:#b8862f,color:#50330b
+    style L4 fill:#fdf1e0,stroke:#b8862f,color:#50330b
+    style L5 fill:#e8f0fe,stroke:#4a6fa5,color:#193655
 ```
 
 Чем ближе уровень к началу схемы, тем больше таких проверок и тем они быстрее и дешевле в поддержке; чем ближе к концу, тем их меньше и тем они дороже. Зелёные уровни быстрые и не ходят по формам: статический анализ идёт без платформы, а YAxUnit всё же запускается в клиентском приложении, поэтому ему нужны платформа и лицензия. Оранжевые уровни идут через клиент тестирования платформы и требуют лицензий.
