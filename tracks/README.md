@@ -28,14 +28,14 @@ flowchart TD
     C -->|"Связывать системы<br/>и обмены"| J["Интеграции"]
     D -->|"Запросы, блокировки,<br/>технологический журнал"| K["Производительность и 1С:Эксперт"]
     D -->|"Серверы, СУБД,<br/>резервное копирование"| L["Администратор, DevOps<br/>и 1С:Эксплуататор"]
-    style E fill:#e8f0fe,stroke:#4a6fa5
-    style F fill:#e8f0fe,stroke:#4a6fa5
-    style G fill:#e8f0fe,stroke:#4a6fa5
-    style H fill:#e6f4ea,stroke:#3f8f5a
-    style I fill:#e6f4ea,stroke:#3f8f5a
-    style J fill:#e6f4ea,stroke:#3f8f5a
-    style K fill:#fdf1e0,stroke:#b8862f
-    style L fill:#fdf1e0,stroke:#b8862f
+    style E fill:#e8f0fe,stroke:#4a6fa5,color:#193655
+    style F fill:#e8f0fe,stroke:#4a6fa5,color:#193655
+    style G fill:#e8f0fe,stroke:#4a6fa5,color:#193655
+    style H fill:#e6f4ea,stroke:#3f8f5a,color:#143c23
+    style I fill:#e6f4ea,stroke:#3f8f5a,color:#143c23
+    style J fill:#e6f4ea,stroke:#3f8f5a,color:#143c23
+    style K fill:#fdf1e0,stroke:#b8862f,color:#50330b
+    style L fill:#fdf1e0,stroke:#b8862f,color:#50330b
 ```
 
 Цвета: зелёные — направления разработки, оранжевые — эксплуатация и производительность, синие — смежные роли и опциональная ветка. Схема — подсказка для первого выбора, а не тест: в реальной работе направления смешиваются.

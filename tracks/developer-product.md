@@ -242,11 +242,11 @@ flowchart LR
     E --> F["Дымовые и сценарные тесты<br/>Vanessa Automation"]
     F --> G["Покрытие и Quality Gate<br/>SonarQube"]
     G --> H["Отчёт Allure<br/>и решение о слиянии"]
-    style B fill:#e6f4ea,stroke:#3f8f5a
-    style C fill:#fdf1e0,stroke:#b8862f
-    style D fill:#fdf1e0,stroke:#b8862f
-    style E fill:#fdf1e0,stroke:#b8862f
-    style F fill:#fdf1e0,stroke:#b8862f
+    style B fill:#e6f4ea,stroke:#3f8f5a,color:#143c23
+    style C fill:#fdf1e0,stroke:#b8862f,color:#50330b
+    style D fill:#fdf1e0,stroke:#b8862f,color:#50330b
+    style E fill:#fdf1e0,stroke:#b8862f,color:#50330b
+    style F fill:#fdf1e0,stroke:#b8862f,color:#50330b
 ```
 
 Зелёный шаг идёт на любом раннере. Оранжевые требуют платформы и лицензий: нужен свой (self-hosted) агент или собственные образы. Облачные раннеры годятся только для BSL LS, SonarScanner и утилит на OneScript.

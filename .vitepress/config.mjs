@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { slug } from 'github-slugger'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import { seo, siteDescription, siteName } from './seo.mjs'
 
 const repository = 'https://github.com/Kelll31/1C-Roadmap'
 const chapter = (text, file) => ({ text, link: `/${file}` })
@@ -8,15 +9,27 @@ const pagesPath = (process.env.PAGES_BASE_PATH ?? '1C-Roadmap').replace(/^\/+|\/
 
 export default defineConfig(withMermaid({
   lang: 'ru',
-  title: 'Роадмап 1С',
-  description: 'Открытый роадмап 1С-разработчика. Этапы обучения, проекты для портфолио и треки специализации.',
+  title: siteName,
+  description: siteDescription,
   base: pagesPath ? `/${pagesPath}/` : '/',
   srcExclude: ['.github/**'],
   appearance: true,
-  head: [['meta', { name: 'theme-color', content: '#f8f7f2' }]],
+  head: [
+    ['meta', { name: 'theme-color', content: '#f8f7f2' }],
+    ['meta', { name: 'robots', content: 'max-image-preview:large' }]
+  ],
+  ...seo,
   markdown: {
     anchor: { slugify: slug },
     config(md) {
+      const renderFence = md.renderer.rules.fence
+      md.renderer.rules.fence = (tokens, index, options, env, self) => {
+        const rendered = renderFence(tokens, index, options, env, self)
+        if (tokens[index].info.trim() === 'mermaid') {
+          return `<DiagramViewer>\n${rendered}\n</DiagramViewer>\n`
+        }
+        return rendered
+      }
       const renderLink = md.renderer.rules.link_open
       md.renderer.rules.link_open = (tokens, index, options, env, self) => {
         const token = tokens[index]
@@ -31,7 +44,7 @@ export default defineConfig(withMermaid({
   },
   mermaid: { securityLevel: 'strict' },
   themeConfig: {
-    siteTitle: 'Роадмап 1С',
+    siteTitle: siteName,
     nav: [
       chapter('Этапы', '02_Timeline'),
       chapter('Проекты', '07_Projects'),
@@ -110,6 +123,7 @@ export default defineConfig(withMermaid({
     lightModeSwitchTitle: 'Светлая тема',
     darkModeSwitchTitle: 'Тёмная тема',
     docFooter: { prev: 'Назад', next: 'Дальше' },
+    lastUpdated: { text: 'Обновлено' },
     editLink: { pattern: `${repository}/edit/main/:path`, text: 'Править на GitHub' },
     notFound: {
       title: 'Страница не найдена',

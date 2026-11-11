@@ -87,7 +87,7 @@ flowchart TB
     P5 --> P14["P14 Найди и почини<br/>этап 7"]
     P4 --> P15["P15 RLS и роли<br/>этап 7"]
     P12 --> P16["P16 Торговый агент<br/>этап 7, опц."]
-    classDef minpath fill:#e8f5e9,stroke:#2e7d32
+    classDef minpath fill:#e8f5e9,stroke:#2e7d32,color:#143c23
     classDef optional stroke-dasharray: 5 5
     class P0,P1,P2,P3,P7,P8,P9 minpath
     class P16,P17 optional
