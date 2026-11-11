@@ -5,12 +5,14 @@ on:
     paths:
       - "**.md"
       - "scripts/**"
+      - "package*.json"
       - ".github/workflows/docs-check.yml"
   push:
     branches: [main]
     paths:
       - "**.md"
       - "scripts/**"
+      - "package*.json"
   workflow_dispatch:
 
 permissions:
@@ -33,7 +35,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Установить парсер mermaid
-        run: npm install --no-save --no-package-lock mermaid@12 jsdom@25
+          cache: npm
+      - run: npm ci
       - name: Разобрать все диаграммы
         run: node scripts/check_mermaid.mjs .
