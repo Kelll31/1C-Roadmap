@@ -43,12 +43,14 @@ async function setZoom(nextLevel) {
 
 <template>
   <div ref="preview" class="diagram-preview" :style="{ minHeight: open ? previewHeight + 'px' : undefined }">
-    <Teleport :to="viewport" :disabled="!open">
-      <div ref="image" class="diagram-image">
-        <slot />
-      </div>
-    </Teleport>
-    <button ref="trigger" type="button" class="diagram-open" aria-haspopup="dialog" @click="openDiagram">
+    <ClientOnly>
+      <Teleport :to="viewport" :disabled="!open">
+        <div ref="image" class="diagram-image">
+          <slot />
+        </div>
+      </Teleport>
+    </ClientOnly>
+    <button ref="trigger" type="button" class="diagram-open" aria-haspopup="dialog" :disabled="!image" @click="openDiagram">
       <span><span aria-hidden="true">⤢</span> Открыть схему</span>
     </button>
 
