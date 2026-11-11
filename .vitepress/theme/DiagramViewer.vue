@@ -24,8 +24,11 @@ async function openDiagram() {
   viewport.value.scrollTo(0, 0)
 }
 
-function closeDiagram() {
-  dialog.value.close()
+async function closeDiagram() {
+  open.value = false
+  await nextTick()
+  dialog.value?.close()
+  trigger.value?.focus({ preventScroll: true })
 }
 
 async function setZoom(nextLevel) {
@@ -35,12 +38,6 @@ async function setZoom(nextLevel) {
   level.value = nextLevel
   await nextTick()
   area.scrollTo(center * area.scrollWidth - area.clientWidth / 2, top * zoom.value)
-}
-
-async function onClose() {
-  open.value = false
-  await nextTick()
-  trigger.value?.focus({ preventScroll: true })
 }
 </script>
 
@@ -55,7 +52,7 @@ async function onClose() {
       <span><span aria-hidden="true">⤢</span> Открыть схему</span>
     </button>
 
-    <dialog ref="dialog" class="diagram-dialog" aria-label="Просмотр схемы" @close="onClose" @click.self="closeDiagram">
+    <dialog ref="dialog" class="diagram-dialog" aria-label="Просмотр схемы" @cancel.prevent="closeDiagram" @click.self="closeDiagram">
       <div class="diagram-panel">
         <div class="diagram-toolbar">
           <div class="diagram-controls" role="group" aria-label="Масштаб схемы">
